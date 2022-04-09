@@ -23,7 +23,9 @@
   "include": [
     "src/**/*.ts", 
     "declarations.d.ts",
-    "tsconfig.json", "src/hooks/useTypedDispatch.tsx",
+    "tsconfig.json",
+    "src/video/background.mp4",
+    "src/video/background.webm"
   ],
   "exclude": [
     "node_modules"
