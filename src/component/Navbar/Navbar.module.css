@@ -1,0 +1,11 @@
+.navbar__bars {
+  position: fixed;
+  right: 30px;
+  top: 36px;
+  height: 32px;
+  width: auto;
+  z-index: 1000;
+  cursor: pointer;
+  color: white;
+}
+/*# sourceMappingURL=Navbar.module.css.map */

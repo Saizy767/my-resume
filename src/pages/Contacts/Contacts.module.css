@@ -1,0 +1,47 @@
+.contacts {
+  position: relative;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  padding-top: 20px;
+  display: flow-root;
+}
+
+.contacts__main {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 5% 15%;
+}
+
+.contacts__title {
+  position: relative;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 2%;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.contacts__info {
+  position: relative;
+  margin: 5% 0%;
+}
+
+.contacts__info_text {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: white;
+  font-size: 40px;
+  margin-left: 5% 10%;
+  font-family: 'Merriweather', serif;
+}
+/*# sourceMappingURL=Contacts.module.css.map */
