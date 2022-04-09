@@ -1,0 +1,44 @@
+
+.cell{
+    position: relative;
+    width: 80%;
+    height: 90px;
+    display: flex;
+    padding-right: 20%;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: content-box;
+    @keyframes slidein {
+        0% {
+            right: 0%;
+        }
+        100% {
+            width: 100%;
+            right: 20%;
+        }
+      }
+    &:hover{
+        animation-duration: 1s;
+        animation-name: slidein;
+        animation-fill-mode: both;
+    }
+    @media screen and (max-width:600px){
+        &:hover{
+            animation-name: none;
+        }
+    }
+    &__title{
+        position: relative;
+        margin-left: 35px;
+        font-size: 35px;
+        color: white;
+        font-family: 'Bebas Neue', sans-serif;
+    }
+    &__image{
+        position: relative;
+        margin-left: 20px;
+        height: 35%;
+        width: auto;
+        color: white;
+    }
+}
