@@ -1,0 +1,35 @@
+.parallax{
+    &__forest{
+        position: absolute;
+        right: -30%;
+        width: 200%;
+        height: auto;
+        bottom: 0%;
+        z-index: 5;
+        filter: brightness(0.5);
+    }
+    &__person{
+        position: absolute;
+        height: 50%;
+        width: auto;
+        bottom: 0%;;
+        width: auto;
+        z-index: 6;
+        @media screen and (max-width: 600px){
+            height: 10%;
+        }
+    }
+    &__milkyWay{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: auto;
+        width: 200%;
+        filter: brightness(0.7);
+        z-index: 1;
+        @media screen and (max-width:600px) {
+            height: 100%;
+            width: auto;
+        }
+    }
+}

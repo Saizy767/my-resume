@@ -5,12 +5,7 @@
     width: 100%;
     z-index: 3;
     padding-top: 20px;
-    box-shadow: 50px -85px 35px rgb(0, 0, 0),
-                -50px -85px 50px rgb(0, 0, 0);
     padding-bottom: 1%;
-    @media screen and (max-width:600px) {
-        box-shadow: none
-    }
     &__title{
         position: relative;
         color: white;

@@ -4,6 +4,7 @@ interface Contact{
     value: string,
     link: string,
     colorContact: string,
+    cursor: string,
 }
 
 const GitHub: Contact = {
@@ -12,6 +13,7 @@ const GitHub: Contact = {
     value: 'https://github.com/Saizy767',
     link: 'https://github.com/Saizy767',
     colorContact: '#2ed1ce',
+    cursor: 'pointer'
 }
 const Phone: Contact = {
     id: 2,
@@ -19,6 +21,7 @@ const Phone: Contact = {
     value: '+7(929)-04-762-04',
     link: 'tel: +79290476204',
     colorContact:'#2e6cd1',
+    cursor: 'pointer'
 }
 const Email: Contact = {
     id: 3,
@@ -26,6 +29,7 @@ const Email: Contact = {
     value: 'kuklin230101@mail.ru',
     link: '/',
     colorContact: '#b16dbd',
+    cursor: 'default'
 }
 const CodeWars: Contact = {
     id: 4, 
@@ -33,6 +37,7 @@ const CodeWars: Contact = {
     value: 'https://www.codewars.com/users/Saizy767',
     link: 'https://www.codewars.com/users/Saizy767',
     colorContact: '#d14a28',
+    cursor: 'pointer'
 }
 
 export const Array_Info = [Phone, GitHub, Email, CodeWars]
@@ -63,5 +68,10 @@ const Address: Additionally={
     name: 'Address',
     value: 'Russia, Nizhny Novgorod'
 }
+const Move: Additionally={
+    id: 5,
+    name: 'Moving to other cities',
+    value: 'Yes'
+}
 
-export const Array_Additioanlly = [Date, Work, English, Address]
+export const Array_Additioanlly = [Date, Work, English, Address, Move]

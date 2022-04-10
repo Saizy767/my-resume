@@ -7,15 +7,17 @@ interface Props{
     name: string,
     link: string,
     value: string,
+    cursor: string,
 }
-const InfoMain:FC<Props> = ({colorContact, name, link, value}) => {
+const InfoMain:FC<Props> = ({colorContact, name, link, value, cursor}) => {
     const hoverRef = useRef(null)
     const isHovered = useHover(hoverRef)
     return(
         <div className={styles.contact}>
             <p className={styles.contact__name} style={{color: isHovered ? colorContact : ''}}>{name}</p>
-                <a href={link} className={styles.contact__link} target="_blank"
-                                                                    rel="noreferrer">
+                <a href={link} className={styles.contact__link} style={{cursor: cursor}}
+                                                                target="_blank"
+                                                                rel="noreferrer">
                     <p className={styles.contact__value} ref={hoverRef}>{value}</p>
                 </a>
         </div>

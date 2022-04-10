@@ -1,21 +1,20 @@
-import React, {FC} from "react";
+import React, {FC, useRef} from "react";
 import styles from './Main.module.scss';
-import backgroundVideoWEBM from '../../video/background.webm'
-import backgroundVideoMP4 from '../../video/background.mp4'
 import DownloadButton from "../../component/Download_button/Download_button";
 import {Element} from 'react-scroll';
+import Parallax from "../../component/Parallax/Parallax";
+import useOnScreen from "../../hooks/useOneScreen";
 
 const Main:FC = () => {
+    const skillsRef = useRef(null)
+    const isVisible = useOnScreen(skillsRef)
     return(
-        <Element name='home'>
-            <section className={styles.main}>
-                <video className={styles.video} autoPlay muted loop>
-                    <source src={backgroundVideoWEBM} type="video/webm"/>  
-                    <source src={backgroundVideoMP4} type="video/mp4"/>  
-                </video>
+        <section className={styles.main} ref={skillsRef}>
+            <Element name='home'>
+                <Parallax isVisible={isVisible}/>
                 <DownloadButton/>
-            </section>
-        </Element>
+            </Element>
+        </section>
     )
 }
 
