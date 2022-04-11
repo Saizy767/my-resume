@@ -19,6 +19,8 @@ const Skills :FC = ()=>{
         return ()=>{ window.removeEventListener('scroll', handleScrool)}
     },[handleScrool])
     
+    console.log('scrollY ' + value)
+    console.log('innderHeigth ' + window.innerHeight * 3)
     return(
         <Element name='skill'>
             <section className={styles.skills} ref={PageRef}>

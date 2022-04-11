@@ -73,5 +73,10 @@ const Move: Additionally={
     name: 'Moving to other cities',
     value: 'Yes'
 }
+const BadHabits: Additionally={
+    id: 6,
+    name: 'Bad habits',
+    value: 'No'
+}
 
-export const Array_Additioanlly = [Date, Work, English, Address, Move]
+export const Array_Additioanlly = [Date, Work, English, Address, Move, BadHabits]

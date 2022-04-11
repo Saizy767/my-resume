@@ -1,7 +1,6 @@
 .parallax{
     &__forest{
         position: absolute;
-        right: -30%;
         width: 200%;
         height: auto;
         bottom: 0%;
@@ -22,7 +21,6 @@
     &__milkyWay{
         position: absolute;
         bottom: 0;
-        left: 0;
         height: auto;
         width: 200%;
         filter: brightness(0.7);
