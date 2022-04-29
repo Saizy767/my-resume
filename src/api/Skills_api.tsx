@@ -5,7 +5,7 @@ import ReactLogo from '../images/React-icon.png'
 import ReduxLogo from '../images/redux_logo.png'
 import NextLogo from '../images/Nextjs-logo.png'
 
-interface Skill{
+export interface Skill{
     id: number,
     value: number,
     title: string,
@@ -26,7 +26,7 @@ const JavaScript: Skill={
 }
 const TypeScript: Skill={
     id:2,
-    value:2,
+    value:3,
     title: 'TypeScript',
     color: 'blue',
     logo: [TSLogo],

@@ -3,7 +3,7 @@ import AniMangaPhoto from '../images/AniManga.png'
 import UserListPhoto from '../images/UserList.png'
 import ResumePhoto from '../images/MyResume.png'
 
-interface Progect{
+export interface Progect{
     id: number,
     photo: any,
     urlGit: string,

@@ -1,33 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "allowJs": true
   },
-  "include": [
-    "src/**/*.ts", 
-    "declarations.d.ts",
-    "tsconfig.json",
-    "src/video/background.mp4",
-    "src/video/background.webm"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+  "files": ["./src/index.tsx"]
 }

@@ -1,33 +1,21 @@
-import React, { FC, useCallback, useEffect, useRef, useState } from "react";
+import React, { FC, useRef} from "react";
 import styles from './Skills.module.scss'
 import {Element} from 'react-scroll'
 import SkillCell from "../../component/Skill_cell/Skill_cell";
-import { Array_Skills } from "../../api/Skills_api";
+import { Array_Skills, Skill } from "../../api/Skills_api";
 import useOnScreen from "../../hooks/useOneScreen";
 
 const Skills :FC = ()=>{
-    const [value, setValue] = useState(0)
     const skillsRef = useRef(null)
     const isVisible = useOnScreen(skillsRef)
     const PageRef = useRef(null)
-
-    const handleScrool = useCallback(()=>{
-        setValue(window.scrollY)
-    },[])
-    useEffect(()=>{
-        window.addEventListener('scroll', handleScrool)
-        return ()=>{ window.removeEventListener('scroll', handleScrool)}
-    },[handleScrool])
-    
-    console.log('scrollY ' + value)
-    console.log('innderHeigth ' + window.innerHeight * 3)
     return(
         <Element name='skill'>
             <section className={styles.skills} ref={PageRef}>
                 <h1 className={styles.skills__title}>Skills</h1>
                 <hr style={{color:'white'}}/>
                 <main className={styles.skills__main} ref={skillsRef}>
-                    {isVisible && Array_Skills.map((el)=>{
+                    {isVisible && Array_Skills.map((el:Skill)=>{
                         return(
                         <SkillCell key={el.id} {...el} isVisible={isVisible}/>
                         )
