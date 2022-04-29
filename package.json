@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "NODE_ENV=development webpack serve & node server/index.js",
-    "build": "NODE_ENV=production webpack serve & node server/index.js",
+    "build": "webpack --mode=production --node-env=production & node server/index.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build:dev": "webpack --mode=development",
