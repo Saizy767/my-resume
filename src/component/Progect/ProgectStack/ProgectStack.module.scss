@@ -1,0 +1,39 @@
+.progect{
+    &__stack{
+        &__title{
+            display: flex;
+            &_name{
+                flex: 5;
+                color: black;
+                font-family: "Merriweather", serif;
+                font-size: 30px;
+                @media screen and (max-width:600px) {
+                    font-size: 24px;
+                }
+            }
+        }
+        &__technology{
+            display: grid;
+            list-style-type: none;
+            gap: 5px;
+            margin-left: 5%;
+            overflow: hidden;
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 10px;
+            font-family: "Merriweather", serif;
+            font-size: 28px;
+            &_down{
+                @extend .progect__stack__technology;
+                max-height: 0px;
+                transition: all 1s cubic-bezier(0, 1, 0, 1);
+                list-style-type: none;
+            }
+            &_up{
+                @extend .progect__stack__technology;
+                height: auto;
+                max-height: 9999px;
+                transition: all 1s cubic-bezier(1, 0, 1, 0);
+            }
+        }
+    }
+}

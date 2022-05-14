@@ -4,7 +4,7 @@
     height: 100%;
     width: 100%;
     z-index: 3;
-    padding-top: 20px;
+    padding-top: 70px;
     padding-bottom: 11%;
     &__title{
         position: relative;
@@ -16,17 +16,12 @@
     }
     &__main{
         position: relative;
-        display: grid;
-        padding: 0 5%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 0 10%;
         padding-top: 40px;
-        grid-template-columns: repeat(2 ,minmax(450px,500px));
-        grid-template-rows: repeat(2, 390px);
-        column-gap: 5rem;
-        row-gap:5rem;
-        justify-content: center;
-        @media screen and (max-width:600px) {
-            grid-template-columns: repeat(1 ,minmax(450px,500px));
-            grid-template-rows: repeat(1, 390px);
-        }
+        align-items: center;
     }
 }

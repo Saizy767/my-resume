@@ -4,10 +4,11 @@ import {Element} from 'react-scroll'
 
 const About :FC = ()=>{
     return(
-        <Element name='about'>
-        <section className={styles.about}>
-            <h1 className={styles.about__title}>About Me</h1>
-            <hr style={{color:'white'}}/>
+        <Element name='about' className={styles.about}>
+            <header>
+                <h1 className={styles.about__title}>About Me</h1>
+                <hr style={{color:'white'}}/>
+            </header>
             <main className={styles.about__main}>
                 <p className={styles.about__text}>My name is Mikhail Kuklin.</p>
                 <p className={styles.about__text}>I am 21 years old</p>
@@ -25,7 +26,6 @@ const About :FC = ()=>{
                 By the degree of studying React, I also mastering Redux, TypeScript, Next JS and much more.
                 </p>
             </main>
-        </section>
         </Element>
     )
 }

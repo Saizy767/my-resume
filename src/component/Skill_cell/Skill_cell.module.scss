@@ -1,24 +1,17 @@
 .skill{
     position: relative;
     width: 100%;
-    height: 100%;
     animation-name: slideout;
-    animation-duration: 3s;
+    animation-duration: 1s;
     opacity: 0;
     animation-fill-mode: both;
+    border-radius: 4px;
+    background: linear-gradient(90deg, rgba(128,128,128,0.001) 0%, rgba(255, 255, 255, 0.6));
     @keyframes slideout {
         100%{
-            right: 0%;
+            transform: translateX(0%);
             opacity: 1;
         }
-    }
-    &__box{
-        position: relative;
-        background-color: gray;
-        background: linear-gradient(90deg, rgba(128,128,128,0.001) 0%, rgba(255, 255, 255, 0.6));
-        width: 100%;
-        height: 100%;
-        border-radius: 4px;
     }
     &__language{
         position: relative;
@@ -32,11 +25,16 @@
         @media screen and (min-width:1900px) {
             font-size: 45px;
         }
+        @media screen and (max-width: 600px) {
+            margin: 10px 0px;
+            max-width: 275px;
+        }
     }
     &__value{
         display: flex;
         flex-direction:row;
         color: white;
+        margin-bottom: 5%;
     }
     &__dash{
         position: relative;
@@ -51,12 +49,10 @@
         }
     }
     &__logo{
-        position: relative;
-        width: auto;
+        position: absolute;
         height: 64px;
-        margin-top: 2px;
-        margin-right: 2px;
-        margin-left: auto;
+        top: 5%;
+        right: 1%;
         display: inline-block;
         @media screen and (min-width:1900px) {
             height: 86px;

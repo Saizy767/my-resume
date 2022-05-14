@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { RootState } from "../store";
 
-interface BoolClick{
+export interface BooleanClick{
     NavbarClick: boolean,
 }
 
-const initialState: BoolClick= {
+const initialState: BooleanClick= {
     NavbarClick: true,
 }
 

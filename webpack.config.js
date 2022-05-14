@@ -1,25 +1,25 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const { SourceMapDevToolPlugin } = require("webpack");
 
 const isProduction = process.env.NODE_ENV == 'production';
 
-
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
 
-
-
 const config = {
-    mode: ( 'development' === process.env.NODE_ENV ? 'development' : 'production' ),
-    performance: {
-        hints: false,
-        maxEntrypointSize: 512000,
-        maxAssetSize: 512000
+    mode: 'production',
+    resolve:{
+        extensions: [".tsx", ".js",".ts"],
+        fallback:{
+            "util": require.resolve("util"),
+            "stream": require.resolve("stream-browserify"),
+            "zlib": require.resolve("browserify-zlib")
+        }
     },
     entry: {
         main: './src/index.tsx',
-       
     },
     output: {
         filename: '[name].[contenthash].js',
@@ -34,6 +34,9 @@ const config = {
             template: './public/index.html',
         }),
         new CleanWebpackPlugin(),
+        new SourceMapDevToolPlugin({
+            filename: "[file].map"
+         }),
     ],
     module: {
         rules: [
@@ -45,6 +48,30 @@ const config = {
                   options: {
                     presets: ['@babel/preset-env',
                               '@babel/preset-typescript',
+                              '@babel/preset-react'
+                  ]
+                  }
+                }
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                  loader: "babel-loader",
+                  options: {
+                    presets: ['@babel/preset-env',
+                              '@babel/preset-react'
+                  ]
+                  }
+                }
+            },
+            {
+                test: /\.jsx$/,
+                exclude: /node_modules/,
+                use: {
+                  loader: "babel-loader",
+                  options: {
+                    presets: ['@babel/preset-env',
                               '@babel/preset-react'
                   ]
                   }
@@ -65,11 +92,9 @@ const config = {
                 }
             },
             {
-                test: /\.(png|jpe?g|gif)$/i,
-                loader: 'file-loader',
-                options: {
-                    name: '[path][name].[ext]',
-                },
+                test: /\.html$/i,
+                exclude: /node_modules/,
+                loader: 'html-loader',
             },
             {
                 test: /\.css$/i,
@@ -80,13 +105,21 @@ const config = {
                 use: [stylesHandler, 'css-loader', 'sass-loader'],
             },
             {
-                test: /\.(eot|svg|ttf|woff|woff2|pdf)$/i,
-                type: 'asset',
+                test: /\.(woff|woff2|ttf|eot)?$/,
+                use: ['file-loader']
             },
-        ],
-    },
-    resolve: {
-        extensions: ['.tsx', '.ts', '.js', '.jsx'],
+            {
+                test: /\.(pdf)?$/,
+                loader: 'file-loader',
+                options: {
+                    name: '/files/[name].[ext]'
+                }
+            },
+            {
+                test: /\.(png|jp[e]g|svg)?$/,
+                loader: 'url-loader',
+            },
+        ]
     },
 };
 

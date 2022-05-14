@@ -1,0 +1,54 @@
+.progect{
+    position: relative;
+    display: flex;
+    width: 55%;
+    height: 20%;
+    flex-direction: column;
+    background-color: gray;
+    border-radius: 5px;
+    padding: 10px 2%;
+    margin-bottom: 5px;
+    @media screen and (max-width:600px) {
+        width: 100%;
+    }
+    &__box{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+    &__name{
+        position: relative;
+        color: black;
+        font-family: "Merriweather", serif;
+        flex: 5;
+        font-size: 35px;
+        @media screen and (max-width:600px) {
+            font-size: 20px;
+        }
+    }
+    &__main{
+        position: relative;
+        &_down{
+            max-height: 0px;
+            overflow: hidden;
+            transition: all 1s cubic-bezier(0, 1, 0, 1);
+        }
+        &_up{
+            height: auto;
+            max-height: 9999px;
+            overflow: hidden;
+            transition: all 1s cubic-bezier(1, 0, 1, 0);
+        }
+        &__image{
+            position: relative;
+            width: 100%;
+            border: black 1px solid;
+            max-width: 100%;
+        }
+        &_warning{
+            position: relative;
+            font-size: 24px;
+            
+        }
+    }
+}

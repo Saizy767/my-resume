@@ -10,7 +10,7 @@ export interface Skill{
     value: number,
     title: string,
     color: string,
-    logo: Array<any>,
+    logo: string,
     position: string,
     animationTime: string,
 }
@@ -20,8 +20,8 @@ const JavaScript: Skill={
     value:3,
     title: 'JavaScript',
     color: 'yellow',
-    logo: [JSLogo],
-    position: '200%',
+    logo: JSLogo,
+    position: '-200%',
     animationTime:'3s'
 }
 const TypeScript: Skill={
@@ -29,8 +29,8 @@ const TypeScript: Skill={
     value:3,
     title: 'TypeScript',
     color: 'blue',
-    logo: [TSLogo],
-    position: '-200%',
+    logo: TSLogo,
+    position: '200%',
     animationTime:'3s'
 }
 const HTMLCSS: Skill={
@@ -38,8 +38,8 @@ const HTMLCSS: Skill={
     value:4,
     title: 'HTML 5 & CSS 3',
     color: 'orange',
-    logo: [HTMLLogo],
-    position: '200%',
+    logo: HTMLLogo,
+    position: '-200%',
     animationTime:'5s'
 }
 const React: Skill={
@@ -47,8 +47,8 @@ const React: Skill={
     value:4,
     title: 'React',
     color: '#61DBFB',
-    logo: [ReactLogo],
-    position: '200%',
+    logo: ReactLogo,
+    position: '-200%',
     animationTime:'4s'
 }
 const Redux: Skill={
@@ -56,8 +56,8 @@ const Redux: Skill={
     value:3,
     title: 'Redux',
     color: 'rgb(118, 74, 188)',
-    logo: [ReduxLogo],
-    position: '-200%',
+    logo: ReduxLogo,
+    position: '200%',
     animationTime:'4s'
 }
 const Next: Skill={
@@ -65,8 +65,8 @@ const Next: Skill={
     value:3,
     title: 'Next.js',
     color: 'white',
-    logo: [NextLogo],
-    position: '-200%',
+    logo: NextLogo,
+    position: '200%',
     animationTime:'5s',
 }
 

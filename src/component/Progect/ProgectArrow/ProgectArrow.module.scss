@@ -1,0 +1,46 @@
+.progect{
+    &__arrow{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        cursor: pointer;
+        &_down{
+            position: relative;
+            transform: rotate(90deg);
+            animation: rotateDown 1s;
+            height: 32px;
+            width: auto;
+            @media screen and (max-width:600px) {
+                height: 18px;
+            }
+            @keyframes rotateDown {
+                from{
+                    transform: rotate(270deg);
+                }
+                to{
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        &_up{
+            position: relative;
+            transform: rotate(270deg);
+            animation: rotateUp 1s;
+            height: 32px;
+            width: auto;
+            @media screen and (max-width:600px) {
+                height: 18px;
+            }
+            @keyframes rotateUp {
+                from{
+                    transform: rotate(90deg);
+                }
+                to{
+                    transform: rotate(270deg);
+                }
+            }
+        }
+    }
+}

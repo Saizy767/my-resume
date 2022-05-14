@@ -10,15 +10,15 @@ interface Props{
     color: string,
     image: JSX.Element,
     title: string,
-    toPage: any,
+    toPage: string,
 }
 
-const NavbarCell:FC<Props> =({color,image,title, toPage, })=>{
+const NavbarCell:FC<Props> =({color,image,title, toPage})=>{
     const hoverRef = useRef(null)
     const isHovered = useHover(hoverRef)
 
     const {cellClick} = clickSlice.actions
-    const {NavbarClick} = useTypedSelector(state=>state.clickSlice)
+    const NavbarClick = useTypedSelector((state)=>state.clickSlice)
     const dispatch = useTypedDispatch()
 
     const handleClick=useCallback(()=>{
@@ -30,7 +30,7 @@ const NavbarCell:FC<Props> =({color,image,title, toPage, })=>{
     return( 
         <Link to={toPage} smooth={true} spy={true}>
             <div className={styles.cell} ref={hoverRef}
-                                        style={{backgroundColor: isHovered ? color: 'rgb(30, 30, 30)'}}
+                                        style={{backgroundColor: isHovered ? color : 'rgb(30, 30, 30)'}}
                                         onClick={handleClick}
                                         >
                 {image}

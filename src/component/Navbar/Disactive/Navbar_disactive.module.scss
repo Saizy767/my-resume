@@ -1,10 +1,10 @@
 .navbar{
     position: fixed;
     display: block;
-    background-color: rgb(30, 30, 30);
     height: 100%;
     width: 400px;
-    float: right;
+    right: -200%;
+    background-color: rgb(30, 30, 30);
     animation-duration: 1s;
     animation-name: slidebar;
     animation-fill-mode: both;
@@ -15,6 +15,7 @@
         }
         100% {
             right:-200%;
+            display: none;
         }
     }
     &__user{

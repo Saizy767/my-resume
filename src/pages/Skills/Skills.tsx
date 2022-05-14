@@ -8,20 +8,20 @@ import useOnScreen from "../../hooks/useOneScreen";
 const Skills :FC = ()=>{
     const skillsRef = useRef(null)
     const isVisible = useOnScreen(skillsRef)
-    const PageRef = useRef(null)
+  
     return(
-        <Element name='skill'>
-            <section className={styles.skills} ref={PageRef}>
+        <Element name='skill' className={styles.skills}>
+            <header>
                 <h1 className={styles.skills__title}>Skills</h1>
                 <hr style={{color:'white'}}/>
-                <main className={styles.skills__main} ref={skillsRef}>
-                    {isVisible && Array_Skills.map((el:Skill)=>{
-                        return(
-                        <SkillCell key={el.id} {...el} isVisible={isVisible}/>
-                        )
-                    })}
-                </main>
-            </section>
+            </header>
+            <main className={styles.skills__main} ref={skillsRef}>
+                {Array_Skills.map((el:Skill)=>{
+                    return(
+                    <SkillCell key={el.id} {...el} isVisible={isVisible}/>
+                    )
+                })}
+            </main>
         </Element>
     )
 }
