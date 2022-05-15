@@ -15,11 +15,19 @@ const InfoMain:FC<Props> = ({colorContact, name, link, value, cursor}) => {
     return(
         <div className={styles.contact}>
             <p className={styles.contact__name} style={{color: isHovered ? colorContact : ''}}>{name}</p>
-                <a href={link} className={styles.contact__link} style={{cursor: cursor}}
+                {link ?
+                    <a href={link} className={styles.contact__link} style={{cursor: cursor}}
+                                                                    target="_blank"
+                                                                    rel="noreferrer">
+                        <p className={styles.contact__value} ref={hoverRef}>{value}</p>
+                    </a>
+                    :
+                    <a className={styles.contact__link} style={{cursor: cursor}}
                                                                 target="_blank"
                                                                 rel="noreferrer">
                     <p className={styles.contact__value} ref={hoverRef}>{value}</p>
                 </a>
+                }
         </div>
     )
 }

@@ -2,6 +2,7 @@ import PomodoroPhoto from '../images/Pomodoro.png'
 import AniMangaPhoto from '../images/AniManga.png'
 import UserListPhoto from '../images/UserList.png'
 import ResumePhoto from '../images/MyResume.png'
+import MaterialListPhoto from '../images/UserListBravo.png'
 
 export type Stack={
     name: string,
@@ -94,7 +95,7 @@ const MyResume: Progect = {
 const MaterialUIList:Progect = {
     id: 5,
     name: 'MaterialUI List',
-    photo: null,
+    photo: MaterialListPhoto,
     urlGit: 'https://github.com/Saizy767/userTableBravo',
     urlDep: null,
     activeProgect: 'rgb(12,122,12)',
@@ -105,10 +106,10 @@ const MaterialUIList:Progect = {
                 {name:'Express', id: 4, color:'rgb(0,0,0)'},
                 {name:'Redux', id: 5, color:'rgb(109,74,176)'}, 
                 {name:'TypeScript', id: 6, color:'rgb(66,114,186)'},
-                {name:'MaterialUI', id: 7, color: 'rgb()'},
+                {name:'MaterialUI', id: 7, color: 'rgb(63, 48, 159)'},
                 {name:'React Router DOM', id: 8, color:'rgb(141,206,236)'},
                 {name:'Redux toolkit', id: 9, color:'rgb(109,74,176)'},
-                {name:'Axios', id: 10, color:'rgb()'}
+                {name:'Axios', id: 10, color:'rgb(54, 53, 167)'}
             ]
 }
 

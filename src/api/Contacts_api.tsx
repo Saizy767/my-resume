@@ -27,7 +27,7 @@ const Email: Contact = {
     id: 3,
     name: 'Email',
     value: 'kuklin230101@mail.ru',
-    link: '/',
+    link: '',
     colorContact: '#b16dbd',
     cursor: 'default'
 }

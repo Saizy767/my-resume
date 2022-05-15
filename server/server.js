@@ -24,3 +24,5 @@ return res.send( indexHTML );
 app.listen( '9000', () => {
     console.log( 'Express server started at <http://localhost:9000>' );
 } );
+
+module.exports = app;
