@@ -1,5 +1,5 @@
-import { useMatch, useResolvedPath, Link, LinkProps } from "react-router-dom";
 import React from "react";
+import { useMatch, useResolvedPath, Link, LinkProps } from "react-router-dom";
 
 const CustomLink = ({ children, to, ...props }: LinkProps) =>{
     const resolved = useResolvedPath(to);

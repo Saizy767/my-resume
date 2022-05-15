@@ -1,5 +1,6 @@
 import React, { FC, useCallback } from "react";
 import { BiRightArrow } from "react-icons/bi";
+
 import styles from './ProgectArrow.module.scss'
 
 interface Props{

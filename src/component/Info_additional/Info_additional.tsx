@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+
 import styles from './Info_additional.module.scss'
 
 interface Props{

@@ -1,8 +1,10 @@
 import React, { FC } from "react";
-import styles from './Progects.module.scss'
 import {Element} from 'react-scroll'
+
 import { Array_Progects, Progect } from "../../api/Progects_api";
 import ProgectElement from "../../component/Progect/ProgectElement/ProjectElement";
+
+import styles from './Progects.module.scss'
 
 const Progects:FC=() =>{
     return(

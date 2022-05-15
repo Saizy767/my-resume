@@ -1,6 +1,7 @@
 import React, { FC} from "react";
-import styles from './About.module.scss'
 import {Element} from 'react-scroll'
+
+import styles from './About.module.scss'
 
 const About :FC = ()=>{
     return(

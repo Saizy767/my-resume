@@ -1,7 +1,9 @@
 import React, {FC} from "react";
-import styles from './Main.module.scss';
 import {Element} from 'react-scroll';
+
 import Parallax from "../../component/Parallax/Parallax";
+
+import styles from './Main.module.scss';
 
 const Main:FC = () => {
     return(

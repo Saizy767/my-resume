@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+
 import ErrorBoundary from './component/Error_Boundary/Error_Boundary.jsx';
 import Main from './pages/Main/Main';
 import About from './pages/About/About';

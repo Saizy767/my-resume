@@ -1,13 +1,14 @@
 import React, {FC, useCallback, useRef} from "react";
-import NavbarActive from "./Active/Navbar_active";
 import {FaBars} from 'react-icons/fa'
-import {useTypedSelector} from '../../hooks/useTypedSelector'
 
-import styles from './Navbar.module.scss'
-import NavbarDisactive from "./Disactive/Navbar_disactive";
+import NavbarActive from "./Active/Navbar_active";
+import {useTypedSelector} from '../../hooks/useTypedSelector'
 import { useTypedDispatch } from "../../hooks/useTypedDispatch";
+import NavbarDisactive from "./Disactive/Navbar_disactive";
 import { clickSlice } from "../../store/reducers/NavbarClickReducer";
 import useHover from "../../hooks/useHover";
+
+import styles from './Navbar.module.scss'
 
 const Navbar: FC = () => {
     const {cellClick} = clickSlice.actions

@@ -1,4 +1,5 @@
 import React, {FC, useCallback, useEffect, useRef, useState} from "react";
+
 import styles from './Parallax.module.scss'
 import MilkyWay from '../../images/milky_way.jpeg'
 import Forest from '../../images/parallax-front.png'

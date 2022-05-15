@@ -1,9 +1,11 @@
 import React, { FC} from "react";
-import styles from './Contacts.module.scss'
 import {Element} from 'react-scroll'
+
 import { Array_Additioanlly, Array_Info } from "../../api/Contacts_api";
 import InfoMain from "../../component/Info_main/Info_main";
 import InfoAdditional from "../../component/Info_additional/Info_additional";
+
+import styles from './Contacts.module.scss'
 
 const Contacts :FC = ()=>{
     return(

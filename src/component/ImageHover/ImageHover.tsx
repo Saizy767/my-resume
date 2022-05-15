@@ -1,9 +1,9 @@
-import { FC, useRef } from "react";
-import useHover from '../../hooks/useHover'
+import React, { FC, useRef } from "react";
 import {BiLinkExternal} from 'react-icons/bi'
 
+import useHover from '../../hooks/useHover'
+
 import styles from './ImageHover.module.scss'
-import React from "react";
 
 interface Props{
     urlDep:string,

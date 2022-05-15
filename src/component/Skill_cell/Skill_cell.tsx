@@ -1,4 +1,5 @@
 import React, { FC} from "react";
+
 import styles from './Skill_cell.module.scss'
 
 interface Props{

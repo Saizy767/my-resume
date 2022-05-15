@@ -1,10 +1,12 @@
 import React,{FC, useCallback, useRef} from "react";
-import useHover from "../../hooks/useHover";
 import {Link} from 'react-scroll'
-import styles from './Navbar_cell.module.scss'
+
+import useHover from "../../hooks/useHover";
+import { useTypedDispatch } from "../../hooks/useTypedDispatch";
 import { clickSlice } from "../../store/reducers/NavbarClickReducer";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
-import { useTypedDispatch } from "../../hooks/useTypedDispatch";
+
+import styles from './Navbar_cell.module.scss'
 
 interface Props{
     color: string,

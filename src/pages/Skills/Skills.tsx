@@ -1,9 +1,11 @@
 import React, { FC, useRef} from "react";
-import styles from './Skills.module.scss'
 import {Element} from 'react-scroll'
+
 import SkillCell from "../../component/Skill_cell/Skill_cell";
 import { Array_Skills, Skill } from "../../api/Skills_api";
 import useOnScreen from "../../hooks/useOneScreen";
+
+import styles from './Skills.module.scss'
 
 const Skills :FC = ()=>{
     const skillsRef = useRef(null)

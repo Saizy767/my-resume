@@ -1,10 +1,12 @@
 import React, {FC, useCallback, useState} from "react";
-import styles from './ProgectElement.module.scss'
+
 import GitLink from '../../GitLink/GitLink'
 import ProgectArrow from '../ProgectArrow/ProgectArrow'
 import ImageHover from '../../ImageHover/ImageHover'
 import ProgectStack from '../ProgectStack/ProgectStack'
 import { Stack } from "../../../api/Progects_api";
+
+import styles from './ProgectElement.module.scss'
 
 interface Props{
     photo: string,

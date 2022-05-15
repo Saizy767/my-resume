@@ -1,9 +1,10 @@
 import React, { FC, useCallback, useEffect, useState } from "react";
+
 import { Stack } from "../../../api/Progects_api";
 import ProgectArrow from "../ProgectArrow/ProgectArrow";
-import styles from './ProgectStack.module.scss'
 import ProgectTechnology from '../ProgectTechnology/ProgectTechnology'
 
+import styles from './ProgectStack.module.scss'
 
 interface Props{
     technology: Stack[],
