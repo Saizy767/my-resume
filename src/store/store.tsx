@@ -1,8 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import clickSlice from './reducers/NavbarClickReducer'
+import imageLoaderSlice from './reducers/ImageLoaderReducer'
 
 const rootReducer = combineReducers({
-    clickSlice
+    clickSlice,
+    imageLoaderSlice,
 })
 
 export const setupStore = () =>{

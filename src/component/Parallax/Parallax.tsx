@@ -18,7 +18,6 @@ const Parallax: FC=() =>{
             setValue(window.scrollY)
     },[])
     
-
     useEffect(()=>{
         if(isVisible){
         window.addEventListener('scroll', handleScrool)}
@@ -40,7 +39,7 @@ const Parallax: FC=() =>{
     },[value])
 
     return(
-        <main className={styles.parallax}>  
+        <main className={styles.parallax}> 
             <img src={MilkyWay} alt='Milky way' className={styles.parallax__milkyWay} ref={MilkyWayRef}/>
             <img src={Forest} alt='front parallax' className={styles.parallax__forest} ref={forestRef}/>
             <img src={Person} alt='person' className={styles.parallax__person} ref={personRef}/>
