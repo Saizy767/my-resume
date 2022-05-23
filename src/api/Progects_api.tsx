@@ -3,6 +3,7 @@ import AniMangaPhoto from '../images/AniManga.png'
 import UserListPhoto from '../images/UserList.png'
 import ResumePhoto from '../images/MyResume.png'
 import MaterialListPhoto from '../images/UserListBravo.png'
+import Checker from '../images/Checker.png'
 
 export type Stack={
     name: string,
@@ -112,5 +113,21 @@ const MaterialUIList:Progect = {
                 {name:'Axios', id: 10, color:'rgb(54, 53, 167)'}
             ]
 }
+const Checkers: Progect = {
+    id: 6,
+    name: 'Checkers',
+    photo: Checker,
+    urlGit: 'https://github.com/Saizy767/Checkers',
+    urlDep: 'https://checkers-rose.vercel.app',
+    activeProgect: 'rgb(228, 177, 105)',
+    isDeploy: true,
+    technology: [{name:'HTML', id: 1, color:'rgb(206,86,52)'},
+                {name:'SCSS', id: 2, color:'rgb(178,100,139)'},
+                {name:'React', id: 3, color:'rgb(141,206,236)'},
+                {name:'TypeScript', id: 4, color:'rgb(66,114,186)'},
+                {name:'Next.js', id: 5, color:'rgb(0,0,0)'},
+                {name:'OOP', id: 6, color:'rgb(236,217,78)'}
+            ]
+}
 
-export const Array_Progects: Array<Progect> = [Pomodoro, Animanga, UserList, MyResume, MaterialUIList]
+export const Array_Progects: Array<Progect> = [Pomodoro, Animanga, UserList, MyResume, MaterialUIList, Checkers]
